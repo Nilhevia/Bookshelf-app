@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/image/rs-icon.png" type="image/x-icon">
+    <title>App - App</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="assets/app.png" alt="" />
+                <h2>Bookshelf Apps</h2>
+            </div>
+            <div class="navigasi">
+                <div class="filter-buku">
+                    <button id="showTambahBuku">
+                        <img class="icon" src="assets/tambah.png" alt="" />
+                        <p>Tambah Buku</p>
+                    </button>
+                    <button class="buku-main buku-active" onclick="bukuMain('all')">
+                        <img class="icon" src="assets/buku.png" alt="" />
+                        <p>Semua Buku</p>
+                        <span id="hitungSemuaBuku">0</span>
+                    </button>
+                    <button class="buku-main" onclick="bukuMain('incompleteApp')">
+                        <img class="icon" src="assets/buka-buku.png" alt="" />
+                        <p>Belum Selesai</p>
+                        <span id="hitungBelumSelesai">0</span>
+                    </button>
+                    <button class="buku-main" onclick="bukuMain('completeApp')">
+                        <img class="icon" src="assets/tutup-buku.png" alt="" />
+                        <p>Selesai dibaca</p>
+                        <span id="hitungSelesai">0</span>
+                    </button>
+    
+                    <div class="cari">
+                        <label for="cariJudulBuku">
+                            <img class="icon" src="assets/search.png" alt="" />
+                        </label>
+                        <input id="cariJudulBuku" type="text" placeholder="Cari nama buku..." />
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="content">
+        <section id="sectionMain" class="section-main">
+            <div class="section-data">
+                <h2>Tambah Buku</h2>
+                <button id="hideTambahBuku">
+                    <img class="icon" src="assets/hide.png" alt="" />
+                </button>
+            </div>
+            <form id="input-buku">
+                <div class="input-item col">
+                    <label for="input-judulBuku">Judul Buku</label>
+                    <input id="input-judulBuku" type="text" placeholder="Isi judul buku" required/>
+                </div>
+                <div class="input-item col">
+                    <label for="input-bukuAuthor">Penulis Buku</label>
+                    <input id="input-bukuAuthor" type="text" placeholder="Isi penulis buku" required />
+                </div>
+                <div class="input-item row">
+                    <div class="input-item row">
+                        <label for="input-bukuYear">Tahun Buku</label>
+                        <input id="input-bukuYear" type="number" placeholder="2022" required />
+                    </div>
+                    <div class="input-item row">
+                        <label for="input-bukuIsComplete">Selesai dibaca</label>
+                        <input id="input-bukuIsComplete" type="checkbox" />
+                    </div>
+                </div>
+                <button type="submit">Tambah buku</button>
+            </form>
+        </section>
+        <section class="app-section">
+            <div class="app-list">
+                    <div id="incompleteApp" class="app-item">
+                        <h3 class="rak-buku" style="margin-left: 360px;">Rak buku belum Selesai dibaca</h3>
+                        <div id="incompleteBukuList" class="buku-list"></div>
+                    </div>
+                    <div id="completeApp" class="app-item">
+                        <h3 class="rak-buku">Rak buku selesai dibaca</h3>
+                        <div id="completeBukuList" class="buku-list"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="assets/js/storage.js"></script>
+    <script src="assets/js/dom.js"></script>
+    <script src="assets/js/index.js"></script>
+</body>
+</html>
