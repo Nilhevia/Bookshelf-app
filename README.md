@@ -5,7 +5,7 @@ Submission Dicoding Course - Belajar Membuat Front End Web untuk Pemula. Dibangu
   [Klik Disini](https://bs.maul-web.net/)
 
 # Cara penggunaan
-Clone / unduh repositori ini "https://github.com/Nilhevia/bookshelf-app.git"
+Clone / unduh repositori ini "https://github.com/Nilhevia/Bookshelf-app.git"
 
 Buka file index.html di browser kesayangan anda
 
